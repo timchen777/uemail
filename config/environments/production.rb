@@ -68,5 +68,18 @@ Mailit::Application.configure do
 # aws_credentials = Aws::Credentials.new(ENV['AKIAJZK4NBTKD4UMGH3A'], ENV['qs1R4bGGTpCdZdhOgyZ03dvCZdA4NZV3WyJdCLye'])
 # Aws::Rails.add_action_mailer_delivery_method(:aws_ses, credentials: aws_credentials, region: ENV['us-east-1'])
 # config.action_mailer.delivery_method = :aws_ses  
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => 'f96254d422f8de',
+  :password => 'dca8a6de674a29',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
+
+  # specify what domain to use for mailer URLs
+  # config.action_mailer.default_url_options = {host: "https://usendemail.herokuapp.com"}
+  config.action_mailer.default_url_options = { :host => 'https://usendemail.herokuapp.com'}
 
 end
