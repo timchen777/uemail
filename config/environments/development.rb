@@ -17,19 +17,44 @@ Mailit::Application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # Change mail delvery to either :smtp, :sendmail, :file, :test
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "railscasts.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
-  }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.smtp_settings = {
+    # address: "smtp.gmail.com",
+    # port: 587,
+    # domain: "https://ide.c9.io/timchen7/ucast",
+    # authentication: "plain",
+    # enable_starttls_auto: true,
+    # user_name: ENV["GMAIL_USERNAME"],
+    # password: ENV["GMAIL_PASSWORD"]
+    # user_name: ENV["timchen7@gmail.com"],
+    # password: ENV[""]
+  # }
+# config.action_mailer.delivery_method = :smtp
+# config.action_mailer.smtp_settings = {
+  # :user_name => 'timchen7@gmail.com',
+  # :password => '',
+  # :address => 'https://usendmail.herokuapp.com/',
+  # :domain => 'https://usendmail.herokuapp.com/',
+  # :address => 'https://ide.c9.io/timchen7/ucast',
+  # :domain => 'https://ide.c9.io/timchen7/ucast',
+  # :port => '2525',
+  # :authentication => :cram_md5
+# }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => 'f96254d422f8de',
+  :password => 'dca8a6de674a29',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
 
   # specify what domain to use for mailer URLs
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
+  # config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.default_url_options = {host: "https://ide.c9.io/timchen7/ucast"}
+  #config.action_mailer.default_url_options = {host: "https://usendmail.herokuapp.com"}
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

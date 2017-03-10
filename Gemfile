@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+# gem 'letter_opener', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,3 +37,25 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # gem 'byebug'
+  # gem 'awesome_print'
+  # gem 'pry'
+  gem 'sqlite3'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  # gem 'web-console', '~> 2.0'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # gem 'spring'
+end
+
+group :production do
+  gem 'pg'
+end

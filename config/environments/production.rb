@@ -64,4 +64,9 @@ Mailit::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  
+# aws_credentials = Aws::Credentials.new(ENV['AKIAJZK4NBTKD4UMGH3A'], ENV['qs1R4bGGTpCdZdhOgyZ03dvCZdA4NZV3WyJdCLye'])
+# Aws::Rails.add_action_mailer_delivery_method(:aws_ses, credentials: aws_credentials, region: ENV['us-east-1'])
+# config.action_mailer.delivery_method = :aws_ses  
+
 end
