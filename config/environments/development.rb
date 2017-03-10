@@ -53,8 +53,8 @@ config.action_mailer.smtp_settings = {
 
   # specify what domain to use for mailer URLs
   # config.action_mailer.default_url_options = {host: "localhost:3000"}
-  config.action_mailer.default_url_options = {host: "https://ide.c9.io/timchen7/ucast"}
-  #config.action_mailer.default_url_options = {host: "https://usendmail.herokuapp.com"}
+  # config.action_mailer.default_url_options = {host: "https://ide.c9.io/timchen7/ucast"}
+  config.action_mailer.default_url_options = {host: "https://uemail.herokuapp.com"}
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
